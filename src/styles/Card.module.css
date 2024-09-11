@@ -1,0 +1,77 @@
+.testimonialCard {
+  border-radius: 12px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+  padding: 40px 30px; /* Adjust padding for a balanced look */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #f5f6f8; /* Light background color for light theme */
+  text-align: center;
+  min-height: 320px; /* Adjust min-height as needed */
+  border: 1px solid #edc8c8; /* Subtle border */
+  box-shadow: 0 4px 8px rgba(20, 28, 104, 0.879); /* Soft shadow */
+}
+
+.testimonialCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(84, 61, 61, 0.2); /* Enhanced shadow on hover */
+}
+
+.cardLight {
+  background-color: #ffffff; /* Light background */
+}
+
+.cardDark {
+  background-color: #87befd; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+.featureTitle {
+  font-weight: 700;
+  font-size: 26px;
+  color: #000000; /* Darker text color */
+  margin-bottom: 12px;
+}
+
+.featureDescription {
+  font-size: 18px;
+  color: #000000; /* Slightly lighter text color */
+  margin-bottom: 20px;
+}
+
+.starRating {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Reduced gap for a tighter look */
+  margin-bottom: 20px;
+}
+
+.starIcon {
+  width: 20px; /* Larger star icons */
+  height: 20px;
+}
+
+.getStartedLink {
+  font-size: 18px;
+  color: #363627; /* Primary color for the link */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+}
+
+.getStartedLink:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+.getStartedLink::after {
+  content: "→";
+  margin-left: 8px;
+  font-size: 20px;
+}

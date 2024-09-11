@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 220px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImage {
+  aspect-ratio: 1.28;
+  object-fit: contain;
+  object-position: center;
+  width: 37px;
+}
+
+.logoText {
+  color: #4f9cf9;
+  font: 700 28px Inter, sans-serif;
+}
+
+/* Nav Menu */
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Styling for links */
+.navLink {
+  color: #4f9cf9;  /* Set your desired color */
+  font: 500 18px/1 DM Sans, sans-serif;
+  text-decoration: none;  /* Remove underline */
+  cursor: pointer;
+}
+
+.navLink:hover {
+  color: #043873;  /* Optional hover effect to change link color */
+}
+
+.dropdownIcon {
+  aspect-ratio: 2.25;
+  object-fit: contain;
+  object-position: center;
+  width: 9px;
+}
+
+/* Button Container */
+.buttonContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.loginButton {
+  border-radius: 8px;
+  background-color: #ffe492;
+  color: #043873;
+  padding: 19px 40px;
+  font: 500 18px/1 Inter, sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;  
+}
+
+.trialButton {
+  border-radius: 8px;
+  background-color: #4f9cf9;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 19px 24px;
+  font: 500 18px/1 Inter, sans-serif;
+  cursor: pointer;
+    text-decoration: none;  
+}
+
+.trialIcon {
+  width: 10px;
+  height: 10px;
+}
+
+@media (max-width: 991px) {
+  .navMenu,
+  .buttonContainer {
+      flex-wrap: wrap;
+  }
+
+  .loginButton,
+  .trialButton {
+      padding: 19px 20px;
+      white-space: normal;
+  }
+}

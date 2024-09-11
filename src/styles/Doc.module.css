@@ -1,0 +1,131 @@
+/* Root styles for theme */
+:root {
+  --primary-color: #092a4f;   /* Main color for buttons, links, etc. */
+  --secondary-color: #000000; /* Accent color for headings */
+  --background-color: #f8f9fa; /* Light background */
+  --text-color: #333;          /* Main text color */
+  --highlight-color: #ff6b6b;  /* Error or highlight */
+  --transition-speed: 0.3s;    /* For smooth transitions */
+}
+
+/* General reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* Main content area */
+.main-content {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  animation: fadeInUp var(--transition-speed) ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive images */
+img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to action buttons */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background var(--transition-speed);
+}
+
+.cta-button:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+}

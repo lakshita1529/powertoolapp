@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #4f9cf9;
+  --secondary-color: #c4defd;
+  --text-color: #333;
+  --button-hover-color: #3b82f6;
+  --gradient-start: #4f9cf9;
+  --gradient-end: #1e40af;
+  --button-gradient: linear-gradient(135deg, #4f9cf9, #1e40af);
+  --background-gradient: linear-gradient(135deg, rgba(79, 156, 249, 0.1), rgba(30, 64, 175, 0.1));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Hero Section */
+.heroSection {
+  background: var(--background-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 100px 32px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+  background-size: 150%;
+  background-position: center;
+}
+
+@media (max-width: 991px) {
+  .heroSection {
+    padding: 60px 20px;
+  }
+}
+
+/* Animation for section fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  margin: auto 0;
+  z-index: 1;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+  justify-content: flex-start;
+  animation: slideInLeft 1.2s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -1.28px;
+  background: var(--button-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.3s ease;
+}
+
+.title:hover {
+  background-position: right center;
+}
+
+@media (max-width: 991px) {
+  .title {
+    font-size: 40px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 24px;
+  color: var(--text-color);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.ctaButton {
+  border-radius: 8px;
+  background: var(--button-gradient);
+  align-self: flex-start;
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  line-height: 1;
+  justify-content: flex-start;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1e40af, #4f9cf9);
+}
+
+@media (max-width: 991px) {
+  .ctaButton {
+    margin-top: 40px;
+  }
+}
+
+.buttonText {
+  margin: 0;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.imageContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto 0;
+  position: relative;
+  animation: slideInRight 1.2s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heroImage {
+  background: var(--secondary-color);
+  display: flex;
+  min-height: 456px;
+  max-width: 100%;
+  width: 685px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heroImage:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 991px) {
+  .imageContainer {
+    max-width: 100%;
+  }
+}
+
+/* Background Animations */
+.heroSection::before,
+.heroSection::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(79, 156, 249, 0.1);
+  border-radius: 50%;
+  animation: pulse 6s infinite;
+}
+
+.heroSection::before {
+  top: -150px;
+  left: -150px;
+}
+
+.heroSection::after {
+  bottom: -150px;
+  right: -150px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
