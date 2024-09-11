@@ -29,7 +29,7 @@ const GuideSection = () => {
   return (
     <section className={styles.guideSection}>
       <header className={styles.sectionHeader}>
-        <h2 className={styles.sectionTitle}>Guides</h2>
+        <h2 className={styles.sectionTitle}>Help Center</h2>
       </header>
       <div className={styles.guideItemsWrapper}>
         {guideItems.map((item, index) => (
