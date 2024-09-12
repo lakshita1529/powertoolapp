@@ -44,57 +44,17 @@
 
 /* Styling for links */
 .navLink {
-  color: #000;  /* Black for nav links */
+  color: #372992;  /* Black for nav links */
   font: 500 18px/1 DM Sans, sans-serif;
   text-decoration: none;  /* Remove underline */
   cursor: pointer;
 }
 
 .navLink:hover {
-  color: #666;  /* Light grey hover effect */
+  color: #372992;  /* Light grey hover effect */
 }
 
-.dropdownIcon {
-  aspect-ratio: 2.25;
-  object-fit: contain;
-  object-position: center;
-  width: 9px;
-}
 
-/* Button Container */
-.buttonContainer {
-  display: flex;
-  gap: 24px;
-}
-
-.loginButton {
-  border-radius: 8px;
-  background-color: #fff;  /* White background for login button */
-  color: #000;  /* Black text for login button */
-  padding: 19px 40px;
-  font: 500 18px/1 Inter, sans-serif;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;  
-}
-
-.trialButton {
-  border-radius: 8px;
-  background-color: #000;  /* Black background for trial button */
-  color: #fff;  /* White text for trial button */
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 19px 24px;
-  font: 500 18px/1 Inter, sans-serif;
-  cursor: pointer;
-  text-decoration: none;  
-}
-
-.trialIcon {
-  width: 10px;
-  height: 10px;
-}
 
 @media (max-width: 991px) {
   .navMenu,

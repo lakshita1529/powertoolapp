@@ -13,7 +13,7 @@ body {
 
 /* Hero Section */
 .heroSection {
-  background: #f0f0f0; /* Light grey background */
+  background: #e0d3e3; /* Light grey background */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,12 +78,13 @@ body {
   font-size: 64px;
   font-weight: 700;
   letter-spacing: -1.28px;
-  color: #000; /* Black for the title */
+  color: #372992; /* Black for the title */
   transition: color 0.3s ease;
 }
 
 .title:hover {
-  color: #333; /* Dark grey on hover */
+  color: #372992;
+  cursor: pointer; /* Dark grey on hover */
 }
 
 @media (max-width: 991px) {

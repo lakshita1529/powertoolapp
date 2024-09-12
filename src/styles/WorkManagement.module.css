@@ -67,7 +67,7 @@ body {
   font-weight: 700;
   letter-spacing: -1.44px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  color: #000;
+  color: #372992;
   transition: color 0.3s ease-in-out;
 }
 
@@ -86,7 +86,7 @@ body {
 
 .button {
   border-radius: 8px;
-  background: linear-gradient(135deg, #000, #333); /* Black gradient */
+  background: linear-gradient(135deg, #000, #372992); /* Black gradient */
   align-self: flex-start;
   display: flex;
   align-items: center;
