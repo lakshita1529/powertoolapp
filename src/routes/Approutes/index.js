@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from '../../components/shared/navbar/Navbar';
 import Documentation from '../../pages/Documentation/GuideSection';
-import Footer from '../../components/shared/footer/Footer';
+
 import HeroSection from '../../pages/HomePage/HeroSection';
 import WorkManagement from '../../pages/HomePage/WorkManagement';
 import Help from '../../pages/Help/HelpSection'
@@ -29,7 +29,7 @@ const Approutes = () => {
 
       </Routes>
    
-      <Footer/>
+  
       
     </Router>
   );

@@ -25,7 +25,7 @@
 }
 
 .logoText {
-  color: #4f9cf9;
+  color: #000; /* Black for logo text */
   font: 700 28px Inter, sans-serif;
 }
 
@@ -44,14 +44,14 @@
 
 /* Styling for links */
 .navLink {
-  color: #4f9cf9;  /* Set your desired color */
+  color: #000;  /* Black for nav links */
   font: 500 18px/1 DM Sans, sans-serif;
   text-decoration: none;  /* Remove underline */
   cursor: pointer;
 }
 
 .navLink:hover {
-  color: #043873;  /* Optional hover effect to change link color */
+  color: #666;  /* Light grey hover effect */
 }
 
 .dropdownIcon {
@@ -69,8 +69,8 @@
 
 .loginButton {
   border-radius: 8px;
-  background-color: #ffe492;
-  color: #043873;
+  background-color: #fff;  /* White background for login button */
+  color: #000;  /* Black text for login button */
   padding: 19px 40px;
   font: 500 18px/1 Inter, sans-serif;
   white-space: nowrap;
@@ -80,15 +80,15 @@
 
 .trialButton {
   border-radius: 8px;
-  background-color: #4f9cf9;
-  color: #fff;
+  background-color: #000;  /* Black background for trial button */
+  color: #fff;  /* White text for trial button */
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 19px 24px;
   font: 500 18px/1 Inter, sans-serif;
   cursor: pointer;
-    text-decoration: none;  
+  text-decoration: none;  
 }
 
 .trialIcon {

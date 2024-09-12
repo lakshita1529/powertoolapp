@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #49243E;
+    --secondary-color: #BB8493;
+    --hover-color: #5A5A5A;
+    --background-gradient: linear-gradient(135deg, #49243E, #BB8493, #ffffff);
+    --button-gradient: linear-gradient(135deg,  #BB8493, #49243E);
+    --font-family: 'Inter', sans-serif;
+    --accent-color: #DBAFA0;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --text-color: black;
+  }

@@ -1,14 +1,3 @@
-:root {
-  --primary-color: #4f9cf9;
-  --secondary-color: #c4defd;
-  --text-color: #333;
-  --button-hover-color: #3b82f6;
-  --gradient-start: #4f9cf9;
-  --gradient-end: #1e40af;
-  --button-gradient: linear-gradient(135deg, #4f9cf9, #1e40af);
-  --background-gradient: linear-gradient(135deg, rgba(79, 156, 249, 0.1), rgba(30, 64, 175, 0.1));
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -18,13 +7,13 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
-  color: var(--text-color);
+  color: #000; /* Text color set to black */
   line-height: 1.5;
 }
 
 /* Hero Section */
 .heroSection {
-  background: var(--background-gradient);
+  background: #f0f0f0; /* Light grey background */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,7 +58,7 @@ body {
 .textBlock {
   display: flex;
   flex-direction: column;
-  color: var(--primary-color);
+  color: #000; /* Black for text */
   justify-content: flex-start;
   animation: slideInLeft 1.2s ease-in-out;
 }
@@ -89,14 +78,12 @@ body {
   font-size: 64px;
   font-weight: 700;
   letter-spacing: -1.28px;
-  background: var(--button-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-position 0.3s ease;
+  color: #000; /* Black for the title */
+  transition: color 0.3s ease;
 }
 
 .title:hover {
-  background-position: right center;
+  color: #333; /* Dark grey on hover */
 }
 
 @media (max-width: 991px) {
@@ -110,20 +97,20 @@ body {
   font-weight: 400;
   line-height: 30px;
   margin-top: 24px;
-  color: var(--text-color);
+  color: #333; /* Dark grey for description */
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .ctaButton {
   border-radius: 8px;
-  background: var(--button-gradient);
+  background: #000; /* Black background for button */
   align-self: flex-start;
   display: flex;
   margin-top: 60px;
   align-items: center;
   gap: 10px;
   font-size: 18px;
-  color: #fff;
+  color: #fff; /* White text for button */
   font-weight: 500;
   letter-spacing: -0.36px;
   line-height: 1;
@@ -136,7 +123,7 @@ body {
 
 .ctaButton:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #1e40af, #4f9cf9);
+  background: #333; /* Dark grey on hover */
 }
 
 @media (max-width: 991px) {
@@ -177,19 +164,19 @@ body {
 }
 
 .heroImage {
-  background: var(--secondary-color);
+  background: #fff; /* White for image background */
   display: flex;
   min-height: 456px;
   max-width: 100%;
   width: 685px;
   border-radius: 12px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .heroImage:hover {
   transform: scale(1.03);
-  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
 }
 
 @media (max-width: 991px) {
@@ -205,7 +192,7 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  background-color: rgba(79, 156, 249, 0.1);
+  background-color: rgba(0, 0, 0, 0.05); /* Faint black circles */
   border-radius: 50%;
   animation: pulse 6s infinite;
 }

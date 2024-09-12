@@ -6,9 +6,9 @@ const HeroSection = () => {
     <section className={styles.heroSection}>
       <div className={styles.content}>
         <div className={styles.textBlock}>
-          <h1 className={styles.title}>Get More Done with Whitepace</h1>  
+          <h1 className={styles.title}>Get More Done with Power Tools</h1>  
           <p className={styles.description}>
-            Project management software that enables your teams to collaborate, plan, analyze, and manage everyday tasks.
+            Workspace management software that enables your teams to collaborate, plan, analyze, and manage everyday tasks.
           </p>
         </div>
         {/* <button className={styles.ctaButton}>
