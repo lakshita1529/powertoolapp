@@ -106,7 +106,7 @@ function Doc() {
             sx={{ mt: 2 }}
           />
           <Typography variant="body1" gutterBottom>
-             > Find the perfect automation for your needs, set it up, and watch it
+              Find the perfect automation for your needs, set it up, and watch it
             work its magic! Explore the{" "}
             <Link
               href="link_to_automation_page"

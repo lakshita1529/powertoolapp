@@ -1,3 +1,4 @@
+
 /* General reset and base styles */
 * {
   margin: 0;
@@ -7,77 +8,44 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff; /* White background */
-  color: #000000; /* Black text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+.doc-container{
+  background-color: #092a4f;
+  padding: 2rem;
+  margin: 5rem;
 }
-
 /* Main content area */
 .main-content {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  background: #ffffff; /* White background */
-  animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  background-color: aqua;
 }
 
 h1 {
   font-size: 3rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #000000; /* Black heading */
-  animation: slideDown 0.3s ease-in;
+  color: var(--primary-color);
 }
 
 h2 {
   font-size: 2rem;
-  color: #000000; /* Black subheading */
-  margin-bottom: 1rem;
-  border-left: 4px solid #000000; /* Black border */
-  padding-left: 1rem;
-  animation: slideRight 0.3s ease-in-out;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  color: var(--secondary-color);
 }
 
 p {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
-  line-height: 1.8;
-  animation: fadeInUp 0.3s ease-in-out;
+  animation: fadeInUp var(--transition-speed) ease-in-out;
 }
 
+/* Keyframes for animations */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -89,108 +57,73 @@ p {
   }
 }
 
-/* Enhanced responsive images */
+/* Responsive images */
 img {
   width: 100%;
   border-radius: 8px;
   margin: 1.5rem 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Call to action buttons */
 .cta-button {
   display: inline-block;
-  padding : 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: #ffffff; /* White text */
-  background-color: #000000; /* Black background */
-  border: none;
-  border-radius: 4px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
-  cursor: pointer;
+  transition: background var(--transition-speed);
 }
 
 .cta-button:hover {
-  background-color: #333333; /* Darker black */
-  transform: scale(1.05);
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Links */
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
 .footer-link {
-  color: #000000; /* Black links */
+  color: white;
   text-decoration: none;
-  border-bottom: 1px solid #000000;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  font-weight: bold;
 }
 
 .footer-link:hover {
-  color: #333333; /* Darker black on hover */
-  border-color: #333333;
+  color: var(--highlight-color);
+  text-decoration: underline;
 }
 
-/* Lists */
-ul, ol {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.8rem;
-}
-
-/* Cards for steps and sections */
-.card {
-  background-color: #ffffff; /* White card background */
-  border: 1px solid #000000; /* Black border */
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
-  margin-bottom: 2rem;
-}
-
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000000; /* Black text */
-  margin-bottom: 1rem;
-}
-
-.card-content {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* Responsive Media */
+/* Responsive design */
 @media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
-  p {
-    font-size: 1rem;
+  .navbar {
+    padding: 1rem;
   }
 
-  .card {
-    padding: 1.5rem;
-  }
-
-  .cta-button {
-    padding: 0.7rem 1.3rem;
-  }
+  
 }
