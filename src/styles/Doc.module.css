@@ -6,6 +6,45 @@
   --text-color: #333;          /* Main text color */
   --highlight-color: #ff6b6b;  /* Error or highlight */
   --transition-speed: 0.3s;    /* For smooth transitions */
+  --accent-color: #56cfe1;     /* Additional accent color */
+  --gradient-color-1: #56cfe1; /* New gradient color */
+  --gradient-color-2: #092a4f; /* New gradient color */
+}
+
+/* Alternative theme 1 - Dark Mode */
+.theme-dark {
+  --primary-color: #1e1e2f;
+  --secondary-color: #fafafa;
+  --background-color: #101010;
+  --text-color: #f8f8f2;
+  --highlight-color: #e63946;
+  --accent-color: #6d597a;
+  --gradient-color-1: #101010;
+  --gradient-color-2: #6d597a;
+}
+
+/* Alternative theme 2 - Vibrant Mode */
+.theme-vibrant {
+  --primary-color: #ff006e;
+  --secondary-color: #ffbe0b;
+  --background-color: #ffffff;
+  --text-color: #333;
+  --highlight-color: #8338ec;
+  --accent-color: #3a86ff;
+  --gradient-color-1: #ffbe0b;
+  --gradient-color-2: #8338ec;
+}
+
+/* Alternative theme 3 - Soft Pastel */
+.theme-pastel {
+  --primary-color: #f9c6c9;
+  --secondary-color: #ffeebb;
+  --background-color: #f0f4f8;
+  --text-color: #1d3557;
+  --highlight-color: #ff6b6b;
+  --accent-color: #ffca3a;
+  --gradient-color-1: #f9c6c9;
+  --gradient-color-2: #ffca3a;
 }
 
 /* General reset and base styles */
@@ -23,12 +62,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
 
 /* Main content area */
 .main-content {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));
+  animation: fadeIn var(--transition-speed) ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 h1 {
@@ -36,20 +86,47 @@ h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   color: var(--primary-color);
+  animation: slideDown var(--transition-speed) ease-in;
 }
 
 h2 {
   font-size: 2rem;
   color: var(--secondary-color);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+  animation: slideRight var(--transition-speed) ease-in-out;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 p {
   font-size: 1.1rem;
   margin-bottom: 1.2rem;
+  line-height: 1.8;
   animation: fadeInUp var(--transition-speed) ease-in-out;
 }
 
-/* Keyframes for animations */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -61,12 +138,18 @@ p {
   }
 }
 
-/* Responsive images */
+/* Enhanced responsive images */
 img {
   width: 100%;
   border-radius: 8px;
   margin: 1.5rem 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Call to action buttons */
@@ -78,18 +161,18 @@ img {
   color: white;
   border-radius: 5px;
   text-decoration: none;
-  transition: background var(--transition-speed);
+  transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
 .cta-button:hover {
-  background: var(--secondary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+/* Enhanced footer */
 .footer {
-  background: var(--primary-color);
+  background: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));
   padding: 2rem;
   text-align: center;
   color: white;
@@ -104,6 +187,7 @@ img {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color var(--transition-speed);
 }
 
 .footer-link:hover {
@@ -111,7 +195,7 @@ img {
   text-decoration: underline;
 }
 
-/* Responsive design */
+/* Responsive design improvements */
 @media (max-width: 768px) {
   .main-content {
     padding: 2rem 1rem;
@@ -125,7 +209,51 @@ img {
     font-size: 1.5rem;
   }
 
-  .navbar {
-    padding: 1rem;
+  .features {
+    display: flex;
+    flex-direction: column;
   }
+
+  .feature-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Enhanced feature cards */
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.troubleshooting {
+  margin-top: 2rem;
+}
+
+.troubleshoot-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-left: 4px solid var(--highlight-color);
+}
+
+.troubleshoot-item h4 {
+  margin-bottom: 0.5rem;
+  color: var(--highlight-color);
 }
