@@ -11,6 +11,38 @@ function Doc() {
 
       <div className="main-content">
         <section className="section">
+          <h2>Unlock the Power of Our App</h2>
+          <p>
+            Effortlessly keep your subitems in sync with changes made to the
+            main column, or sync main column changes to subitems' columns
+            automatically. Instantly update the person responsible for changes
+            with the latest user who made the edit. Effortlessly add the user
+            who made the change to the People column. Automatically update Start
+            and End Dates based on the timeline when the status changes. Ensure
+            Start and End Dates reflect any changes in both status and timeline
+            for accurate scheduling.
+          </p>
+        </section>
+
+        <section className="section">
+          <h2>How to Install Our App</h2>
+          <p>Open the App Marketplace and navigate to the App Marketplace in monday.com.</p>
+          <p>Search for Power Tools by entering “Power Tools” into the search bar.</p>
+          <p>Select our app and click the install button (it may vary based on the button available on the home screen).</p>
+        </section>
+
+        <section className="section">
+          <h2>Getting Started with Our App</h2>
+          <p>
+            Access the Integration Center by heading over to the Integration
+            Center in the board. Search for “Power Tools” by typing “Power
+            Tools” into the search bar and selecting it. If you encounter any
+            issues finding it, refresh or try searching again until it appears.
+          </p>
+          <p>Choose and configure your automation. Find the perfect automation for your needs, set it up, and watch it work its magic!</p>
+        </section>
+
+        <section className="section">
           <h2>Step 1: Setup</h2>
           <p>Start by downloading the app from our official website or app store. Follow the on-screen instructions to install it. Once installed, open the app and complete the initial setup by creating an account or logging in with your existing credentials.</p>
           <p>Ensure your device meets the minimum system requirements listed on our website for the best performance.</p>
@@ -52,7 +84,7 @@ function Doc() {
 
         <section className="section">
           <h2>Step 4: Final Notes</h2>
-          <p>Thank you for using our app! We hope this guide has been helpful. For more detailed information, visit our <a href="#faq" className="cta-button">FAQ</a> page or reach out to our support team for further assistance.</p>
+          <p>Thank you for using our app! We hope this guide has been helpful. For more detailed information, visit our FAQ page or reach out to our support team for further assistance.</p>
         </section>
       </div>
     </div>
