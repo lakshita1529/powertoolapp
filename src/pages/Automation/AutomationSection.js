@@ -7,14 +7,25 @@ const GuideSection = () => {
     {
       title: "When column changes, copy this change to the Subitems’ Column to the same value.",
       description: `
-                    Feature Mechanics:
-                    🔄 Automatic Updates
-                    When the main column value changes, all subitems' columns will instantly update to reflect the same value.
-                    🔗 Supported Trigger Columns
-                     You can choose any supported column type in Monday.com as the trigger.
-                      📝 Matching Column Types
-                     The subitems' columns must be of the same type as the main column to ensure proper synchronization.
-`,
+    Feature Mechanics:
+    🔄 Automatic Updates
+    When the main column value changes, all subitems' columns will instantly update to reflect the same value.
+    🔗 Supported Trigger Columns
+    You can choose any supported column type in Monday.com as the trigger.
+    📝 Matching Column Types
+    The subitems' columns must be of the same type as the main column to ensure proper synchronization.
+    
+    🚫 Limitations:
+    Unsupported Column Types:
+    1. Doc-type Columns:
+       - Monday Docs
+       - Meeting Notes
+       - Creative Briefs
+    2. Dependency Columns:
+       - Dependency
+    3. Dropdown Columns:
+       - Dropdown selections
+  `,
       iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
     },
     {
