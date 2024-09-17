@@ -61,6 +61,7 @@ body {
   color: #000; /* Black for text */
   justify-content: flex-start;
   animation: slideInLeft 1.2s ease-in-out;
+  align-items: start;
 }
 
 @keyframes slideInLeft {

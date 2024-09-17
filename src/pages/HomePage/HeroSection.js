@@ -9,7 +9,7 @@ const HeroSection = () => {
         <div className={styles.textBlock}>
           <h1 className={styles.title}>Welcome To Power Tools</h1>  
           <p className={styles.description}>
-          Enhance monday.com 💡 workflows with powerful and flexible automations. 🔝✨
+          Enhance monday.com workflows with powerful and flexible automations. 
           </p>
         </div>
         <Link to="/documentation">

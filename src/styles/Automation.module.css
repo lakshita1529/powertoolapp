@@ -22,7 +22,7 @@
 .guideItem {
   border: 1px solid #49243E; /* Updated color */
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #49243E; 
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -39,7 +39,7 @@
   align-items: center;
   cursor: pointer;
   padding: 10px;
-  background-color: #c22d95; 
+  background-color: #49243E; 
   border-radius: 8px;
 }
 
@@ -52,6 +52,7 @@
 
 .iconOpen, .iconClosed {
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .iconOpen {

@@ -19,7 +19,7 @@ function Doc() {
       <Card sx={{ mb: 4 }}>
         <CardContent>
           <Typography variant="h4" component="h1" gutterBottom>
-            Get Started
+            Getting Started
           </Typography>
           {/* <Typography variant="body1">
            • Learn how to maximize the app's features with this guide.
@@ -35,13 +35,18 @@ function Doc() {
           </Typography>
           <List>
             <ListItem>
-              <ListItemText primary="• Auto-Assign Tasks: Automatically assign tasks to the right person, ensuring clarity and accountability with zero manual effort." />
+              <ListItemText primary="Auto-Assign Tasks" 
+                 secondary="Automatically assign tasks to the right person, ensuring clarity and accountability with zero manual effort."/>
             </ListItem>
             <ListItem>
-              <ListItemText primary="• Subitem Automation: Seamlessly manage subitems for better organization." />
+              <ListItemText primary="Subitem Automation"
+              
+              secondary="Seamlessly manage subitems for better organization."/>
             </ListItem>
             <ListItem>
-              <ListItemText primary="• Timeline Automations: Effortlessly manage dates and timelines to keep projects on track and your team aligned with goals." />
+              <ListItemText primary="Timeline Automations"
+              
+              secondary="Effortlessly manage dates and timelines to keep projects on track and your team aligned with goals."/>
             </ListItem>
           </List>
         </CardContent>
@@ -55,13 +60,22 @@ function Doc() {
           </Typography>
           <List>
             <ListItem>
-              <ListItemText primary="• Open the App Marketplace on monday.com." />
+            <ListItemText
+            primary="Open the App Marketplace"
+            secondary="Navigate to the App Marketplace on monday.com."
+          />
             </ListItem>
             <ListItem>
-              <ListItemText primary='• Enter “Power Tools” into the search bar.' />
+            <ListItemText
+            primary="Search for Power Tools "
+            secondary="Enter “Power Tools” into the search bar. "
+          />
             </ListItem>
             <ListItem>
-              <ListItemText primary="• Select our app and click the install button." />
+            <ListItemText
+            primary="Click & Install  "
+            secondary="Select our app and click the install button  "
+          />
             </ListItem>
           </List>
           <Typography variant="body1" gutterBottom>
@@ -90,11 +104,33 @@ function Doc() {
           </Typography>
           <List>
             <ListItem>
-              <ListItemText primary="• Head over to the Integration Center in the board." />
+            <ListItemText
+            primary="Access the Integration Center "
+            secondary="Head over to the Integration Center on the board. "
+          />
             </ListItem>
             <ListItem>
-              <ListItemText primary='• Type “Power Tools” into the search bar and select it.' />
+            <ListItemText
+            primary="Search for 'Power Tools'"
+            secondary={
+              <>
+                Type "Power Tools" into the search bar and select it.
+                <br />
+                <Typography variant="body2" component="span" sx={{ fontStyle: 'italic' }}>
+                  (If you encounter any issues finding it, refresh or try searching again until it appears.)
+                </Typography>
+              </>
+            }
+          />
             </ListItem>
+            <ListItem>
+            <ListItemText
+            primary="Choose and Configure Your Automation "
+            secondary="Find the perfect automation for your needs, set it up, and watch it work its magic! "
+          />
+            </ListItem>
+
+
           </List>
           <CardMedia
             component="img"
@@ -102,35 +138,17 @@ function Doc() {
             alt="Integration Center Screenshot"
             sx={{ mt: 2 }}
           />
-          <Typography variant="body1" gutterBottom>
-            • Find the perfect automation for your needs, set it up, and watch it work its magic! Explore the{" "}
-            <RouterLink to="/automation">
-              automation page
-            </RouterLink>{" "}
-            for detailed insights on each automation process.
-          </Typography>
+        <Typography variant="body2" gutterBottom sx={{ fontStyle: 'italic' }}>
+  Explore the{" "}
+  <RouterLink to="/automation">
+    automation page
+  </RouterLink>{" "}
+  for detailed insights on each automation process.
+</Typography>
         </CardContent>
       </Card>
 
-      {/* Additional Tips Section */}
-      <Card sx={{ mb: 4 }}>
-        <CardContent>
-          <Typography variant="h5" component="h2" gutterBottom>
-            Additional Tips
-          </Typography>
-          <List>
-            <ListItem>
-              <ListItemText primary="• Explore further customization options in the settings." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="• Set up notifications for key events and deadlines." />
-            </ListItem>
-            <ListItem>
-              <ListItemText primary="• Leverage integration with other apps for a streamlined workflow." />
-            </ListItem>
-          </List>
-        </CardContent>
-      </Card>
+    
     </Container>
   );
 }
