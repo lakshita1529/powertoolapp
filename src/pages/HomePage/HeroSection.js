@@ -12,7 +12,7 @@ const HeroSection = () => {
           Enhance monday.com workflows with powerful and flexible automations. 
           </p>
         </div>
-        <Link to="/documentation">
+        <Link to="/documentation" style={{textDecoration:"none"}}>
           <button className={styles.ctaButton}>
             <span className={styles.buttonText}>Get Started</span>
           </button>
