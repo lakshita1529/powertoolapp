@@ -18,15 +18,9 @@
 }
 
 .logoImage {
-  aspect-ratio: 1.28;
+  width: 10rem; /* Increase size */
   object-fit: contain;
   object-position: center;
-  width: 37px;
-}
-
-.logoText {
-  color: #000; /* Black for logo text */
-  font: 700 28px Inter, sans-serif;
 }
 
 /* Nav Menu */
@@ -56,15 +50,5 @@
 
 
 
-@media (max-width: 991px) {
-  .navMenu,
-  .buttonContainer {
-      flex-wrap: wrap;
-  }
 
-  .loginButton,
-  .trialButton {
-      padding: 19px 20px;
-      white-space: normal;
-  }
-}
+

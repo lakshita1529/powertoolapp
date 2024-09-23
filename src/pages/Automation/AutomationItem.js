@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../../styles/Automation.module.css'; // Adjust the path as necessary
 
-const GuideItem = ({ title, description }) => {
+const GuideItem = ({ title, description, imageSrc }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -10,18 +10,24 @@ const GuideItem = ({ title, description }) => {
 
   return (
     <div className={styles.guideItem}>
-      <div className={styles.guideHeader} onClick={handleClick}>
+      <div
+        className={styles.guideHeader}
+        onClick={handleClick}
+        onKeyPress={(e) => (e.key === 'Enter' || e.key === ' ') && handleClick()}
+        tabIndex="0"
+        aria-expanded={isOpen}
+        role="button"
+      >
         <h3 className={styles.guideTitle}>{title}</h3>
         <span className={isOpen ? styles.iconOpen : styles.iconClosed}>▼</span>
       </div>
 
       {isOpen && (
         <div className={styles.guideDescription}>
-          {/* Split the description by line breaks and render each line with conditional formatting */}
+          {/* Description Rendering */}
           {description.split('\n').map((line, index) => {
             const trimmedLine = line.trim();
 
-            // Check for "Feature Mechanics" and make it bold
             if (trimmedLine === 'Feature Mechanics:') {
               return (
                 <p key={index} className={styles.featureMechanics}>
@@ -30,7 +36,6 @@ const GuideItem = ({ title, description }) => {
               );
             }
 
-            // Check for subheading (lines with emojis like ✨, 🔄, 👤, etc.)
             if (/^[✨🔄👤🔲📅⏳]/.test(trimmedLine)) {
               return (
                 <h5 key={index} className={styles.subheading}>
@@ -39,7 +44,6 @@ const GuideItem = ({ title, description }) => {
               );
             }
 
-            // Check for bullet points (lines that start with `·`)
             if (/^·/.test(trimmedLine)) {
               return (
                 <li key={index} className={styles.bulletPoint}>
@@ -48,13 +52,19 @@ const GuideItem = ({ title, description }) => {
               );
             }
 
-            // Default to regular text
             return (
               <p key={index} className={styles.descriptionLine}>
                 {trimmedLine}
               </p>
             );
           })}
+
+          {/* Conditional Image Rendering */}
+          {imageSrc && (
+            <div className={styles.imageContainer}>
+              <img src={imageSrc} alt={`${title} illustration`} className={styles.image} />
+            </div>
+          )}
         </div>
       )}
     </div>

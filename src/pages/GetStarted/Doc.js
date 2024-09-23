@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/Doc.module.css";
+import image from '../../assests/Screen1.png'
+import video from './demovideo.mp4'
 import {
   Card,
   CardContent,
@@ -78,18 +80,10 @@ function Doc() {
           />
             </ListItem>
           </List>
-          <Typography variant="body1" gutterBottom>
-            Need help? Watch the video tutorial below:
-          </Typography>
-          <CardMedia
-            component="video"
-            controls
-            src="path_to_video.mp4"
-            sx={{ width: "100%", height: "auto" }}
-          />
+      
           <CardMedia
             component="img"
-            image="path_to_screenshot.png"
+            image={image}
             alt="Marketplace Screenshot"
             sx={{ mt: 2 }}
           />
@@ -132,11 +126,14 @@ function Doc() {
 
 
           </List>
+          <Typography variant="body1" gutterBottom>
+            Need help? Watch the video tutorial below:
+          </Typography>
           <CardMedia
-            component="img"
-            image="path_to_screenshot.png"
-            alt="Integration Center Screenshot"
-            sx={{ mt: 2 }}
+            component="video"
+            controls
+            src={video}
+            sx={{ width: "100%", height: "auto" }}
           />
         <Typography variant="body2" gutterBottom sx={{ fontStyle: 'italic' }}>
   Explore the{" "}

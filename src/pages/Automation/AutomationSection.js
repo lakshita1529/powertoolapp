@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from '../../styles/Automation.module.css';
 import GuideItem from './AutomationItem'; // Correct import path
+import image1 from '../../assests/Screen3.png'
+import image2 from '../../assests/Screen2.png'
+import image3 from '../../assests/Screen4.png'
+import image4 from '../../assests/Screen5.png'
+import image5 from '../../assests/Screen6.png'
 
 const GuideSection = () => {
   const guideItems = [
@@ -26,10 +31,10 @@ const GuideSection = () => {
     3. Dropdown Columns:
        - Dropdown selections
   `,
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
+  imageSrc: image1
     },
     {
-      title: "When the column changes, automatically assign the person who made the change.",
+      title: "When the column changes, assign(replace) the person who made the change.",
       description: `
                     Feature Mechanics:
 ✨ Automatic Assignment
@@ -40,7 +45,8 @@ The "Person" column must be of the People type.
 🔄 Column Flexibility
 The trigger column can be any type in Monday.com.
 `,
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
+
+      imageSrc: image2,
     },
     {
       title: "When the column changes, add the person who made the change to the People column.",
@@ -55,7 +61,8 @@ The column must be of the People type.
 The trigger column can be any type in Monday.com.
  
 `,
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
+
+      imageSrc: image5
     },
     {
       title: "When status changes, update the start date and end date based on the timeline.",
@@ -68,7 +75,8 @@ Both Start Date and End Date must be of the ‘Date’ type.
 ⏳ Timeline Column
 The Timeline must be of the ‘Timeline’ type.
 `,
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
+
+      imageSrc: image3,
     },
     {
       title: "When status changes, update the timeline based on the start and end dates.",
@@ -81,7 +89,8 @@ Start Date and End Date should both be of the ‘Date’ type.
 ⏳ Timeline Column
 The column must be of the ‘Timeline’ type.
 `,
-      iconSrc: "https://cdn-icons-png.flaticon.com/512/60/60995.png",
+
+      imageSrc: image4,
     },
   ];
 
@@ -96,7 +105,7 @@ The column must be of the ‘Timeline’ type.
             key={index}
             title={item.title}
             description={item.description}
-            iconSrc={item.iconSrc}
+           imageSrc={item.imageSrc}
           />
         ))}
       </div>

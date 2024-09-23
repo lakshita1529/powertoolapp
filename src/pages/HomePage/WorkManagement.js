@@ -16,7 +16,7 @@ const WorkManagement = () => {
               />
               <Button
                 text="Get Started"
-                href="/documentation" // Link to the documentation
+                href="/documentation" 
               />
             </div>
           </div>

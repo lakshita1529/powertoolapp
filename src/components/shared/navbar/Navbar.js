@@ -42,16 +42,6 @@ const logoVariants = {
   }
 };
 
-const buttonVariants = {
-  hover: {
-    scale: 1.1,
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    transition: {
-      duration: 0.3,
-      ease: 'easeInOut'
-    }
-  }
-};
 
 const Header = () => {
   const navigate = useNavigate();  // React Router's hook to navigate
@@ -71,14 +61,14 @@ const Header = () => {
         className={styles.logoContainer}
         variants={logoVariants}
         onClick={handleLogoClick}
-        style={{ cursor: 'pointer' }}  // Makes the logo clickable
+
       >
         <img 
           src={logoImage}  // Use the imported logo image
           alt="PowerTools Logo" 
           className={styles.logoImage}
         />
-        <span className={styles.logoText}>PowerTools</span>
+
       </motion.div>
 
       <nav className={styles.navMenu}>
